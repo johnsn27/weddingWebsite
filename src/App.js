@@ -1,13 +1,23 @@
 // src/App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/navbar';
+import Accommodation from './pages/accommodation';  // Import the new OurStory component
+import Parking from './pages/parking';  // Import the new OurStory component
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      {/* Other components or content for your wedding website */}
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" />
+          <Route path="/accommodation" element={<Accommodation />} />
+          <Route path="/parking" element={<Parking />} />
+          {/* Add more routes for other pages as needed */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
