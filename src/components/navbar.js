@@ -125,6 +125,7 @@ const NavBar = () => {
         <NavLinkItem><a href="#rsvp">RSVP</a></NavLinkItem>
         <NavLinkItem><a href="#gallery">Gallery</a></NavLinkItem>
         <NavLinkItem><a href="#contact">Contact</a></NavLinkItem>
+        <NavLinkItem><a href="#login">Login</a></NavLinkItem>
       </NavLinks>
     </nav>
   );
