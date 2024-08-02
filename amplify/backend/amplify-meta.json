@@ -1,0 +1,57 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-weddingwebsite-dev-2d86e-authRole",
+      "UnauthRoleArn": "arn:aws:iam::021891574492:role/amplify-weddingwebsite-dev-2d86e-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::021891574492:role/amplify-weddingwebsite-dev-2d86e-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
+      "UnauthRoleName": "amplify-weddingwebsite-dev-2d86e-unauthRole",
+      "StackName": "amplify-weddingwebsite-dev-2d86e",
+      "StackId": "arn:aws:cloudformation:eu-north-1:021891574492:stack/amplify-weddingwebsite-dev-2d86e/f3a96190-50ed-11ef-aef2-06cce2b53075",
+      "AmplifyAppId": "d207io1jm680dy"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2024-08-02T16:52:16.416Z",
+      "output": {},
+      "lastPushDirHash": "EL26ap4i5/XkGwm7nShnbe1RSMg="
+    }
+  },
+  "function": {
+    "weddingwebsited34e09b7PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2024-08-02T16:50:41.172Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2024-08-02T16:50:41.488Z",
+      "distZipFilename": "weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
+        "s3Key": "amplify-builds/weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/function/weddingwebsited34e09b7PostConfirmation-cloudformation-template.json",
+        "logicalId": "functionweddingwebsited34e09b7PostConfirmation"
+      },
+      "lastPushTimeStamp": "2024-08-02T16:52:16.664Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::021891574492:role/weddingwebsited34e09b7PostConfirmation-dev",
+        "Region": "eu-north-1",
+        "Arn": "arn:aws:lambda:eu-north-1:021891574492:function:weddingwebsited34e09b7PostConfirmation-dev",
+        "Name": "weddingwebsited34e09b7PostConfirmation-dev",
+        "LambdaExecutionRole": "weddingwebsited34e09b7PostConfirmation-dev"
+      },
+      "lastPushDirHash": "NX+vdLcLkd1rZWW0GNeYK4ECKDY="
+    }
+  }
+}
