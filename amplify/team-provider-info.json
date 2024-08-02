@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-weddingwebsite-dev-2d86e-authRole",
+      "UnauthRoleArn": "arn:aws:iam::021891574492:role/amplify-weddingwebsite-dev-2d86e-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::021891574492:role/amplify-weddingwebsite-dev-2d86e-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
+      "UnauthRoleName": "amplify-weddingwebsite-dev-2d86e-unauthRole",
+      "StackName": "amplify-weddingwebsite-dev-2d86e",
+      "StackId": "arn:aws:cloudformation:eu-north-1:021891574492:stack/amplify-weddingwebsite-dev-2d86e/f3a96190-50ed-11ef-aef2-06cce2b53075",
+      "AmplifyAppId": "d207io1jm680dy"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d207io1jm680dy",
+          "type": "manual"
+        }
+      },
+      "function": {
+        "weddingwebsited34e09b7PostConfirmation": {
+          "deploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
+          "s3Key": "amplify-builds/weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip"
+        }
+      }
+    }
+  }
+}
