@@ -1,12 +1,15 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Authenticator } from '@aws-amplify/ui-react';
 import NavBar from './components/navbar';
 import Accommodation from './pages/accommodation';  // Import the new OurStory component
 import Parking from './pages/parking';  // Import the new OurStory component
+import Login from './pages/login';  // Import the new OurStory component
 
 function App() {
   return (
+    // <Authenticator>
     <Router>
       <div className="App">
         <NavBar />
@@ -14,10 +17,12 @@ function App() {
           <Route path="/" />
           <Route path="/accommodation" element={<Accommodation />} />
           <Route path="/parking" element={<Parking />} />
+          <Route path="/login" element={<Login />} />
           {/* Add more routes for other pages as needed */}
         </Routes>
       </div>
     </Router>
+    // </Authenticator>
   );
 }
 
