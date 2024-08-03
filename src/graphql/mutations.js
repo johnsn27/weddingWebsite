@@ -1,10 +1,6 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
-
 export const createUser = /* GraphQL */ `
-  mutation CreateUser($id: ID!, $email: String!, $familyName: String!) {
-    createUser(id: $id, email: $email, familyName: $familyName) {
-      id
+  mutation CreateUser($email: String!, $familyName: String!) {
+    createUser(input: { email: $email, familyName: $familyName }) {
       email
       familyName
       familyMembers {
@@ -17,10 +13,10 @@ export const createUser = /* GraphQL */ `
     }
   }
 `;
+
 export const createFamilyMember = /* GraphQL */ `
-  mutation CreateFamilyMember($id: ID!, $userID: ID!, $name: String!) {
-    createFamilyMember(id: $id, userID: $userID, name: $name) {
-      id
+  mutation CreateFamilyMember($userID: ID!, $name: String!) {
+    createFamilyMember(input: { userID: $userID, name: $name }) {
       userID
       name
       __typename

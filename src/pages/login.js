@@ -60,7 +60,7 @@ const Login = () => {
           query: createFamilyMember,
           variables: {
             input: {
-              id: userId,
+              userID: userId,
               name: member.name,
             }
           }
