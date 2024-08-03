@@ -232,7 +232,7 @@
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
           "DynamoDBEnableServerSideEncryption": false,
           "S3DeploymentBucket": "amplify-weddingwebsite-dev-2d86e-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/fb38ac3a3845a60cb5e6bdd08eb9423de21a69b0",
+          "S3DeploymentRootKey": "amplify-appsync-files/f66b78f2d8327a8586261fd1b54b9b53f8311e24",
           "env": "dev"
         }
       }
@@ -269,7 +269,7 @@
           "authSelections": "identityPoolAndUserPool",
           "useDefault": "default",
           "usernameAttributes": "email, phone_number",
-          "userPoolGroupList": "",
+          "userPoolGroupList": "weddingguests",
           "serviceName": "Cognito",
           "usernameCaseSensitive": false,
           "useEnabledMfas": true,
@@ -287,6 +287,51 @@
           },
           "breakCircularDependency": true,
           "dependsOn": "",
+          "env": "dev"
+        }
+      }
+    },
+    "authuserPoolGroups": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "Parameters": {
+          "AuthRoleArn": {
+            "Fn::GetAtt": [
+              "AuthRole",
+              "Arn"
+            ]
+          },
+          "UnauthRoleArn": {
+            "Fn::GetAtt": [
+              "UnauthRole",
+              "Arn"
+            ]
+          },
+          "authweddingwebsite75fc2fadUserPoolId": {
+            "Fn::GetAtt": [
+              "authweddingwebsite75fc2fad",
+              "Outputs.UserPoolId"
+            ]
+          },
+          "authweddingwebsite75fc2fadAppClientIDWeb": {
+            "Fn::GetAtt": [
+              "authweddingwebsite75fc2fad",
+              "Outputs.AppClientIDWeb"
+            ]
+          },
+          "authweddingwebsite75fc2fadAppClientID": {
+            "Fn::GetAtt": [
+              "authweddingwebsite75fc2fad",
+              "Outputs.AppClientID"
+            ]
+          },
+          "authweddingwebsite75fc2fadIdentityPoolId": {
+            "Fn::GetAtt": [
+              "authweddingwebsite75fc2fad",
+              "Outputs.IdentityPoolId"
+            ]
+          },
           "env": "dev"
         }
       }

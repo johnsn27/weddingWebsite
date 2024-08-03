@@ -7,6 +7,9 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "auth": {
+    "userPoolGroups": {
+      "weddingguestsGroupRole": "string"
+    },
     "weddingwebsite75fc2fad": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",

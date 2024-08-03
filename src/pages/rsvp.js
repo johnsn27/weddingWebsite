@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AuthWrapper from './authwrapper';
 import { Amplify } from 'aws-amplify';
 import { createRSVP } from '../graphql/mutations';
 import { generateClient } from 'aws-amplify/api';
@@ -28,9 +29,8 @@ const RSVPForm = () => {
             query: createRSVP,
             variables: {
                 input: formData
-            }
+            },
           });
-    //   await Amplify.API.graphql((createRSVP, { input: formData }));
       alert('RSVP submitted successfully!');
     } catch (error) {
       console.error('Error submitting RSVP:', error);
@@ -38,6 +38,7 @@ const RSVPForm = () => {
   };
 
   return (
+    <AuthWrapper>
         <form onSubmit={handleSubmit} style={{marginTop: '100px'}}>
           <input
               type="text"
@@ -70,6 +71,7 @@ const RSVPForm = () => {
               min="0" />
           <button type="submit">Submit RSVP</button>
       </form>
+      </AuthWrapper>
   );
 };
 

@@ -28,7 +28,8 @@
         "weddingwebsite": {}
       },
       "auth": {
-        "weddingwebsite75fc2fad": {}
+        "weddingwebsite75fc2fad": {},
+        "userPoolGroups": {}
       }
     }
   }
