@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Amplify } from 'aws-amplify';
 import { createRSVP } from '../graphql/mutations';
+import { generateClient } from 'aws-amplify/api';
+
+const client = generateClient();
 
 const RSVPForm = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +24,13 @@ const RSVPForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await Amplify.API.graphql((createRSVP, { input: formData }));
+      await client.graphql({
+            query: createRSVP,
+            variables: {
+                input: formData
+            }
+          });
+    //   await Amplify.API.graphql((createRSVP, { input: formData }));
       alert('RSVP submitted successfully!');
     } catch (error) {
       console.error('Error submitting RSVP:', error);
@@ -29,7 +38,7 @@ const RSVPForm = () => {
   };
 
   return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{marginTop: '100px'}}>
           <input
               type="text"
               name="name"
