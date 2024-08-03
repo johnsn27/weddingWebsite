@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React, { useState } from 'react';
 import { Authenticator, useTheme } from '@aws-amplify/ui-react';
+import { getCurrentUser } from 'aws-amplify/auth';
 import { Amplify } from 'aws-amplify';
 import { createUser, createFamilyMember } from '../graphql/mutations';
 import '@aws-amplify/ui-react/styles.css';
@@ -34,7 +35,8 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const user = await Amplify.Auth.currentAuthenticatedUser(); // Ensure user is fetched correctly
+      const user = await getCurrentUser(); // Ensure user is fetched correctly
+      console.log('user', user)
 
       // Create the primary user first
       const createUserResponse = await Amplify.API.graphql({
