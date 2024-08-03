@@ -25,7 +25,8 @@
         }
       },
       "auth": {
-        "weddingwebsite2a09e098": {}
+        "weddingwebsite2a09e098": {},
+        "userPoolGroups": {}
       },
       "api": {
         "weddingwebsite": {}

@@ -29,7 +29,13 @@ const awsmobile = {
     "aws_appsync_graphqlEndpoint": "https://knhixo5nczg7nfbmk5oumwl2yy.appsync-api.eu-north-1.amazonaws.com/graphql",
     "aws_appsync_region": "eu-north-1",
     "aws_appsync_authenticationType": "API_KEY",
-    "aws_appsync_apiKey": "da2-vzlbsrn7ina2fbno4qnzjzabee"
+    "aws_appsync_apiKey": "da2-vzlbsrn7ina2fbno4qnzjzabee",
+    "Auth": {
+        // "identityPoolId": "eu-north-1_NCfeG7lO5",
+        "region": "eu-north-1",
+        "userPoolId": "eu-north-1_NCfeG7lO5",
+        // "userPoolWebClientId": "xxxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
 };
 
 
