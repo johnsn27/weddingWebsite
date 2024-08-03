@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import React, { useState } from 'react';
 import { Authenticator, useTheme } from '@aws-amplify/ui-react';
-import { API, graphqlOperation } from 'aws-amplify';
+import { API } from '@aws-amplify/api';
+import { graphqlOperation } from '@aws-amplify/api-graphql';
 import { createUser, createFamilyMember } from './graphql/mutations';
 import '@aws-amplify/ui-react/styles.css';
 
