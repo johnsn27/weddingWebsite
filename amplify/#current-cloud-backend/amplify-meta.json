@@ -12,38 +12,11 @@
       "AmplifyAppId": "d207io1jm680dy"
     }
   },
-  "hosting": {
-    "amplifyhosting": {
-      "service": "amplifyhosting",
-      "providerPlugin": "awscloudformation",
-      "type": "manual",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
-        "logicalId": "hostingamplifyhosting"
-      },
-      "lastPushTimeStamp": "2024-08-02T16:52:16.416Z",
-      "output": {},
-      "lastPushDirHash": "EL26ap4i5/XkGwm7nShnbe1RSMg="
-    }
-  },
   "function": {
     "weddingwebsited34e09b7PostConfirmation": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2024-08-02T16:50:41.172Z",
-      "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2024-08-02T16:50:41.488Z",
-      "distZipFilename": "weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip",
-      "s3Bucket": {
-        "deploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
-        "s3Key": "amplify-builds/weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip"
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/function/weddingwebsited34e09b7PostConfirmation-cloudformation-template.json",
-        "logicalId": "functionweddingwebsited34e09b7PostConfirmation"
-      },
-      "lastPushTimeStamp": "2024-08-02T16:52:16.664Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::021891574492:role/weddingwebsited34e09b7PostConfirmation-dev",
         "Region": "eu-north-1",
@@ -51,7 +24,55 @@
         "Name": "weddingwebsited34e09b7PostConfirmation-dev",
         "LambdaExecutionRole": "weddingwebsited34e09b7PostConfirmation-dev"
       },
-      "lastPushDirHash": "NX+vdLcLkd1rZWW0GNeYK4ECKDY="
+      "lastPushTimeStamp": "2024-08-03T18:19:06.317Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/function/weddingwebsited34e09b7PostConfirmation-cloudformation-template.json",
+        "logicalId": "functionweddingwebsited34e09b7PostConfirmation"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
+        "s3Key": "amplify-builds/weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip"
+      }
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "providerPlugin": "awscloudformation",
+      "service": "amplifyhosting",
+      "type": "manual",
+      "output": {},
+      "lastPushTimeStamp": "2024-08-03T18:19:06.319Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      }
+    }
+  },
+  "api": {
+    "weddingwebsite": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "i2xn7pzcx5fqta3bz2jorckzxq",
+        "GraphQLAPIEndpointOutput": "https://knhixo5nczg7nfbmk5oumwl2yy.appsync-api.eu-north-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-vzlbsrn7ina2fbno4qnzjzabee"
+      },
+      "lastPushTimeStamp": "2024-08-03T18:19:06.807Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiweddingwebsite"
+      },
+      "lastPushDirHash": "ZN+kFwABCvNrKAYngue18JZu2pg="
     }
   }
 }
