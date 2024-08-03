@@ -99,6 +99,9 @@ const RSVPForm = () => {
         variables: { email: formData.email }
       });
 
+      console.log('result', result)
+      console.log('formData.email', formData.email)
+
       if (result.data.getRSVPByEmail) {
         setErrorMessage('You have already submitted an RSVP.');
         setLoading(false);

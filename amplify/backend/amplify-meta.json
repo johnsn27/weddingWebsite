@@ -24,7 +24,7 @@
         "Name": "weddingwebsited34e09b7PostConfirmation-dev",
         "LambdaExecutionRole": "weddingwebsited34e09b7PostConfirmation-dev"
       },
-      "lastPushTimeStamp": "2024-08-03T18:53:08.817Z",
+      "lastPushTimeStamp": "2024-08-03T18:57:43.306Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/function/weddingwebsited34e09b7PostConfirmation-cloudformation-template.json",
         "logicalId": "functionweddingwebsited34e09b7PostConfirmation"
@@ -41,7 +41,7 @@
       "service": "amplifyhosting",
       "type": "manual",
       "output": {},
-      "lastPushTimeStamp": "2024-08-03T18:53:08.819Z",
+      "lastPushTimeStamp": "2024-08-03T18:57:43.307Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
         "logicalId": "hostingamplifyhosting"
@@ -67,7 +67,7 @@
         "GraphQLAPIEndpointOutput": "https://knhixo5nczg7nfbmk5oumwl2yy.appsync-api.eu-north-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-vzlbsrn7ina2fbno4qnzjzabee"
       },
-      "lastPushTimeStamp": "2024-08-03T18:53:09.322Z",
+      "lastPushTimeStamp": "2024-08-03T18:57:43.308Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiweddingwebsite"
