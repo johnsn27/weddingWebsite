@@ -1,3 +1,7 @@
+type Query {
+  getRSVPByEmail(email: String!): RSVP
+}
+
 type RSVP @model @auth(rules: [{ allow: public }]) {
   id: ID!
   name: String!
