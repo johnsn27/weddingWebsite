@@ -1,18 +1,18 @@
 /** @jsxImportSource @emotion/react */
 import React, { useState } from 'react';
 import { Authenticator, useTheme } from '@aws-amplify/ui-react';
-import { generateClient } from 'aws-amplify/api';
+import { Amplify } from 'aws-amplify';
 import { createUser, createFamilyMember } from '../graphql/mutations';
 import '@aws-amplify/ui-react/styles.css';
 import awsconfig from '../aws-exports';
 
-// Initialize the client
-const apiClient = generateClient(awsconfig);
+// Configure Amplify
+Amplify.configure(awsconfig);
 
 const Login = () => {
   const navBarHeight = '80px'; // The height of your navbar
   const { tokens } = useTheme();
-  
+
   const [familyMembers, setFamilyMembers] = useState([{ name: '' }]);
   const [familyName, setFamilyName] = useState(''); // State to hold family name
 
@@ -32,32 +32,38 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     try {
-      const user = await apiClient.auth.currentAuthenticatedUser(); // Ensure user is fetched correctly
-      
+      const user = await Amplify.Auth.currentAuthenticatedUser(); // Ensure user is fetched correctly
+
       // Create the primary user first
-      const createUserResponse = await apiClient.graphql.graphqlOperation(createUser, {
-        input: {
-          email: user.attributes.email,
-          familyName: familyName, // Use state for family name
+      const createUserResponse = await Amplify.API.graphql({
+        query: createUser,
+        variables: {
+          input: {
+            email: user.attributes.email,
+            familyName: familyName, // Use state for family name
+          }
         }
       });
 
       const userId = createUserResponse.data.createUser.id;
-      
+
       // Add family members linked to the primary user
       for (const member of familyMembers) {
-        await apiClient.graphql.graphqlOperation(createFamilyMember, {
-          input: {
-            userID: userId,
-            name: member.name,
+        await Amplify.API.graphql({
+          query: createFamilyMember,
+          variables: {
+            input: {
+              userID: userId,
+              name: member.name,
+            }
           }
         });
       }
 
       console.log('Family members successfully added!');
-      
+
     } catch (error) {
       console.error('Error adding family members:', error);
     }
