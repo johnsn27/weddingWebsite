@@ -20,7 +20,7 @@ const formContainerStyle = css`
   border: 2px solid #e8d4c1; /* Soft border */
   
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 280px 20px 80px; /* More top padding for mobile view */
   }
 `;
 
@@ -67,6 +67,72 @@ const errorMessageStyle = css`
   color: #c62828;
   margin-top: 10px;
   font-size: 16px;
+`;
+
+const checkboxContainerStyle = css`
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #4a3d28;
+`;
+
+const checkboxLabelStyle = css`
+  margin-left: 10px;
+  font-size: 16px;
+  color: #4a3d28;
+`;
+
+const customCheckboxStyle = css`
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+`;
+
+const hiddenCheckboxStyle = css`
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+`;
+
+const checkmarkStyle = css`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #d0b8a4;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+  }
+
+  input:checked + & {
+    background-color: #8e5a4f;
+    border-color: #8e5a4f;
+  }
+
+  input:checked + &::after {
+    content: '✓';
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const RSVPForm = () => {
@@ -151,16 +217,19 @@ const RSVPForm = () => {
           css={inputStyle}
           required
         />
-        <label>
-          Attending:
-          <input
-            type="checkbox"
-            name="attending"
-            checked={formData.attending}
-            onChange={handleChange}
-            css={inputStyle}
-          />
-        </label>
+        <div css={checkboxContainerStyle}>
+          <label css={customCheckboxStyle}>
+            <input
+              type="checkbox"
+              name="attending"
+              checked={formData.attending}
+              onChange={handleChange}
+              css={hiddenCheckboxStyle}
+            />
+            <span css={checkmarkStyle} />
+          </label>
+          <label css={checkboxLabelStyle}>Attending</label>
+        </div>
         <input
           type="number"
           name="guests"
