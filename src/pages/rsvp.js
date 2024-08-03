@@ -20,7 +20,7 @@ const formContainerStyle = css`
   border: 2px solid #e8d4c1; /* Soft border */
   
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 280px 20px 80px; /* More top padding for mobile view */
   }
 `;
 
