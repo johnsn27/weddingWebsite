@@ -199,6 +199,19 @@
         }
       }
     },
+    "functionweddingwebsited34e09b7PostConfirmation": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/function/weddingwebsited34e09b7PostConfirmation-cloudformation-template.json",
+        "Parameters": {
+          "modules": "add-to-group",
+          "resourceName": "weddingwebsited34e09b7PostConfirmation",
+          "deploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
+          "s3Key": "amplify-builds/weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip",
+          "env": "dev"
+        }
+      }
+    },
     "hostingamplifyhosting": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
@@ -210,15 +223,16 @@
         }
       }
     },
-    "functionweddingwebsited34e09b7PostConfirmation": {
+    "apiweddingwebsite": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/function/weddingwebsited34e09b7PostConfirmation-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
-          "modules": "add-to-group",
-          "resourceName": "weddingwebsited34e09b7PostConfirmation",
-          "deploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
-          "s3Key": "amplify-builds/weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip",
+          "AppSyncApiName": "weddingwebsite",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "S3DeploymentBucket": "amplify-weddingwebsite-dev-2d86e-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/d954e2515f5b34ba4344abcfd5c72b7bee673e76",
           "env": "dev"
         }
       }
