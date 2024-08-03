@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 import { Authenticator, useTheme } from '@aws-amplify/ui-react';
 import { getCurrentUser } from 'aws-amplify/auth';
 import { Amplify } from 'aws-amplify';
+import { generateClient } from 'aws-amplify/api';
 import { createUser, createFamilyMember } from '../graphql/mutations';
 import '@aws-amplify/ui-react/styles.css';
 import awsconfig from '../aws-exports';
+
+const client = generateClient();
 
 // Configure Amplify
 Amplify.configure(awsconfig);
@@ -39,11 +42,11 @@ const Login = () => {
       console.log('user', user)
 
       // Create the primary user first
-      const createUserResponse = await Amplify.API.graphql({
+      const createUserResponse = await client.graphql({
         query: createUser,
         variables: {
           input: {
-            email: user.attributes.email,
+            email: user.signInDetails.loginId,
             familyName: familyName, // Use state for family name
           }
         }
@@ -53,11 +56,11 @@ const Login = () => {
 
       // Add family members linked to the primary user
       for (const member of familyMembers) {
-        await Amplify.API.graphql({
+        await client.graphql({
           query: createFamilyMember,
           variables: {
             input: {
-              userID: userId,
+              id: userId,
               name: member.name,
             }
           }
