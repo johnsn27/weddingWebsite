@@ -23,6 +23,9 @@
           "deploymentBucketName": "amplify-weddingwebsite-dev-2d86e-deployment",
           "s3Key": "amplify-builds/weddingwebsited34e09b7PostConfirmation-5036594e7461434c7636-build.zip"
         }
+      },
+      "auth": {
+        "weddingwebsite2a09e098": {}
       }
     }
   }

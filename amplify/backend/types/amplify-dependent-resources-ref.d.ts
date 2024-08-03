@@ -1,4 +1,15 @@
 export type AmplifyDependentResourcesAttributes = {
+  "auth": {
+    "weddingwebsite2a09e098": {
+      "AppClientID": "string",
+      "AppClientIDWeb": "string",
+      "IdentityPoolId": "string",
+      "IdentityPoolName": "string",
+      "UserPoolArn": "string",
+      "UserPoolId": "string",
+      "UserPoolName": "string"
+    }
+  },
   "function": {
     "weddingwebsited34e09b7PostConfirmation": {
       "Arn": "string",
