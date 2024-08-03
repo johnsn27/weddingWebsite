@@ -277,6 +277,18 @@
         }
       }
     },
+    "apiweddingwebsite": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "AppSyncApiName": "weddingwebsite",
+          "S3DeploymentBucket": "amplify-weddingwebsite-dev-2d86e-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/4ed1d4b3073dec5eca3944a4c5353f3793e982df",
+          "env": "dev"
+        }
+      }
+    },
     "UpdateRolesWithIDPFunction": {
       "DependsOn": [
         "AuthRole",

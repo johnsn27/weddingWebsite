@@ -21,7 +21,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
         "logicalId": "hostingamplifyhosting"
       },
-      "lastPushTimeStamp": "2024-08-03T09:54:34.993Z",
+      "lastPushTimeStamp": "2024-08-03T10:35:12.436Z",
       "output": {},
       "lastPushDirHash": "EL26ap4i5/XkGwm7nShnbe1RSMg="
     }
@@ -43,7 +43,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/function/weddingwebsited34e09b7PostConfirmation-cloudformation-template.json",
         "logicalId": "functionweddingwebsited34e09b7PostConfirmation"
       },
-      "lastPushTimeStamp": "2024-08-03T09:54:34.996Z",
+      "lastPushTimeStamp": "2024-08-03T10:35:12.439Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::021891574492:role/weddingwebsited34e09b7PostConfirmation-dev",
         "Region": "eu-north-1",
@@ -84,7 +84,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/auth/weddingwebsite2a09e098-cloudformation-template.json",
         "logicalId": "authweddingwebsite2a09e098"
       },
-      "lastPushTimeStamp": "2024-08-03T09:54:35.503Z",
+      "lastPushTimeStamp": "2024-08-03T10:35:12.440Z",
       "output": {
         "UserPoolId": "eu-north-1_NCfeG7lO5",
         "AppClientIDWeb": "3ocnk4pgnmq1rpurkv298scplu",
@@ -95,6 +95,33 @@
         "UserPoolName": "weddingwebsite2a09e098_userpool_2a09e098"
       },
       "lastPushDirHash": "YVpFOHc8dTfpTkRf7qBSUYDr9xs="
+    }
+  },
+  "api": {
+    "weddingwebsite": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "i2xn7pzcx5fqta3bz2jorckzxq",
+        "GraphQLAPIEndpointOutput": "https://knhixo5nczg7nfbmk5oumwl2yy.appsync-api.eu-north-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-vzlbsrn7ina2fbno4qnzjzabee"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiweddingwebsite"
+      },
+      "lastPushTimeStamp": "2024-08-03T10:35:13.562Z",
+      "lastPushDirHash": "/yPJwPCcQytAacDRsxpcTq5DXVQ="
     }
   }
 }

@@ -1,0 +1,28 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type User {
+  id: ID!
+  email: String!
+  familyName: String!
+  familyMembers: [FamilyMember] # This will need to be handled manually in resolvers
+}
+
+type FamilyMember {
+  id: ID!
+  userID: ID!
+  name: String!
+}
+
+type Query {
+  getUser(id: ID!): User
+  listUsers: [User]
+  listFamilyMembers(userID: ID!): [FamilyMember]
+}
+
+type Mutation {
+  createUser(id: ID!, email: String!, familyName: String!): User
+  createFamilyMember(id: ID!, userID: ID!, name: String!): FamilyMember
+}
