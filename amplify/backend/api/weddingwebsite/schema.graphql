@@ -1,0 +1,7 @@
+type RSVP @model {
+  id: ID!
+  name: String!
+  email: String!
+  attending: Boolean!
+  guests: Int
+}

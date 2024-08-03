@@ -21,7 +21,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
         "logicalId": "hostingamplifyhosting"
       },
-      "lastPushTimeStamp": "2024-08-02T16:52:16.416Z",
+      "lastPushTimeStamp": "2024-08-03T16:44:28.049Z",
       "output": {},
       "lastPushDirHash": "EL26ap4i5/XkGwm7nShnbe1RSMg="
     }
@@ -43,7 +43,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/function/weddingwebsited34e09b7PostConfirmation-cloudformation-template.json",
         "logicalId": "functionweddingwebsited34e09b7PostConfirmation"
       },
-      "lastPushTimeStamp": "2024-08-02T16:52:16.664Z",
+      "lastPushTimeStamp": "2024-08-03T16:44:28.052Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::021891574492:role/weddingwebsited34e09b7PostConfirmation-dev",
         "Region": "eu-north-1",
@@ -52,6 +52,67 @@
         "LambdaExecutionRole": "weddingwebsited34e09b7PostConfirmation-dev"
       },
       "lastPushDirHash": "NX+vdLcLkd1rZWW0GNeYK4ECKDY="
+    }
+  },
+  "api": {
+    "weddingwebsite": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "i2xn7pzcx5fqta3bz2jorckzxq",
+        "GraphQLAPIEndpointOutput": "https://knhixo5nczg7nfbmk5oumwl2yy.appsync-api.eu-north-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-vzlbsrn7ina2fbno4qnzjzabee"
+      },
+      "lastPushTimeStamp": "2024-08-03T16:44:28.052Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiweddingwebsite"
+      },
+      "lastPushDirHash": "EMXJTOx7nMytqrsTMYFH5g4GcEU="
+    }
+  },
+  "auth": {
+    "weddingwebsite75fc2fad": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-weddingwebsite-dev-2d86e-deployment/amplify-cfn-templates/auth/weddingwebsite75fc2fad-cloudformation-template.json",
+        "logicalId": "authweddingwebsite75fc2fad"
+      },
+      "lastPushTimeStamp": "2024-08-03T16:44:32.117Z"
     }
   }
 }
