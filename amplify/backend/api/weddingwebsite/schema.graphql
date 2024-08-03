@@ -1,0 +1,15 @@
+type RSVP @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  name: String!
+  email: String!
+  attending: Boolean!
+  guests: Int
+}
+
+input CreateRSVPInput {
+  id: ID
+  name: String!
+  email: String!
+  attending: Boolean
+  guests: Int
+}
