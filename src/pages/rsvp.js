@@ -7,7 +7,6 @@ import { getRSVPByEmail } from '../graphql/queries';
 
 const client = generateClient();
 
-// Styles
 const formContainerStyle = css`
   padding: 60px 20px;
   max-width: 600px;
@@ -136,7 +135,6 @@ const checkmarkStyle = css`
   }
 `;
 
-// Component
 const RSVPForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -166,6 +164,9 @@ const RSVPForm = () => {
         query: getRSVPByEmail,
         variables: { email: formData.email }
       });
+
+      console.log('result', result)
+      console.log('formData.email', formData.email)
 
       if (result.data.getRSVPByEmail) {
         setErrorMessage('You have already submitted an RSVP.');

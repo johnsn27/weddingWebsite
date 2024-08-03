@@ -232,7 +232,7 @@
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
           "DynamoDBEnableServerSideEncryption": false,
           "S3DeploymentBucket": "amplify-weddingwebsite-dev-2d86e-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/d954e2515f5b34ba4344abcfd5c72b7bee673e76",
+          "S3DeploymentRootKey": "amplify-appsync-files/3f03fb789803eb5493ce9c905b5fb9a132a119f5",
           "env": "dev"
         }
       }
