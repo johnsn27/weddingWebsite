@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
-import { css } from '@emotion/react';
 import { storyPageStyle, titleStyle, paragraphStyle, linkStyle } from '../styles/pageStyles';
 
 

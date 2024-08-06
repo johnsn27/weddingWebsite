@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 import { storyPageStyle, titleStyle, paragraphStyle } from '../styles/pageStyles';
 
 const Taxis = () => {
@@ -20,6 +19,13 @@ const Taxis = () => {
           <p css={paragraphStyle}>
           The wedding celebrations will conclude at 23:30. <br />
           Please arrange all transport for no later than 23:40. <br />
+          Please book transport well in advance, it is almost impossible to arrange this on the night.
+          </p>
+          <p css={paragraphStyle}>
+          When booking taxis to and from High House please ensure your location is noted as High House Wedding Venue. <br />
+          This ensures our local neighbours are not disturbed when guests and taxis are locating the venue. <br />
+          Unfortunately Google Maps and Sat Nav systems can be unclear as to our exact location and will generally take you too far. <br />
+          Please look out for our entrance rather than relying on these.
           Please book transport well in advance, it is almost impossible to arrange this on the night.
           </p>
         </div>
