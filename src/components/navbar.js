@@ -115,7 +115,7 @@ const NavBar = () => {
           onMouseEnter={toggleDropdown} 
           onMouseLeave={toggleDropdown}
         >
-          <a href="#about">Guest Information</a>
+          <a href="/">Guest Information</a>
           <DropdownMenu show={dropdownVisible}>
             <li><a href="/accommodation">Accommodation</a></li>
             <li><a href="/parking">Parking</a></li>
