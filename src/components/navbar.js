@@ -109,13 +109,14 @@ const NavBar = () => {
 
   return (
     <nav css={navBarStyle}>
-      <div css={logoStyle}>Our Wedding</div>
+      {/* todo: style the logo not have the link line underneath */}
+      <a href='/' css={logoStyle}>Nathan & Megan's Wedding</a> 
       <NavLinks>
-        <NavLinkItem 
+        <NavLinkItem
           onMouseEnter={toggleDropdown} 
           onMouseLeave={toggleDropdown}
         >
-          <a href="#about">Guest Information</a>
+          <a href="/">Guest Information</a>
           <DropdownMenu show={dropdownVisible}>
             <li><a href="/accommodation">Accommodation</a></li>
             <li><a href="/parking">Parking</a></li>
