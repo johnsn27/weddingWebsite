@@ -5,6 +5,7 @@ import NavBar from './components/navbar';
 import Accommodation from './pages/accommodation';  // Import the new OurStory component
 import Parking from './pages/parking';  // Import the new OurStory component
 import RSVPForm from './pages/rsvp';  // Import the new OurStory component
+import Schedule from './pages/schedule';  // Import the new OurStory component
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/accommodation" element={<Accommodation />} />
           <Route path="/parking" element={<Parking />} />
           <Route path="/rsvp" element={<RSVPForm />} />
+          <Route path="/schedule" element={<Schedule />} />
           {/* Add more routes for other pages as needed */}
         </Routes>
       </div>
