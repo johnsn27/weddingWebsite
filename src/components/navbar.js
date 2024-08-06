@@ -119,6 +119,7 @@ const NavBar = () => {
           <DropdownMenu show={dropdownVisible}>
             <li><a href="/accommodation">Accommodation</a></li>
             <li><a href="/parking">Parking</a></li>
+            <li><a href="/findingTheVenue">Finding The Venue</a></li>
             <li><a href="/taxis">Taxis</a></li>
           </DropdownMenu>
         </NavLinkItem>
