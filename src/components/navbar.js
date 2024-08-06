@@ -109,9 +109,10 @@ const NavBar = () => {
 
   return (
     <nav css={navBarStyle}>
-      <div css={logoStyle}>Our Wedding</div>
+      {/* todo: style the logo not have the link line underneath */}
+      <a href='/' css={logoStyle}>Nathan & Megan's Wedding</a> 
       <NavLinks>
-        <NavLinkItem 
+        <NavLinkItem
           onMouseEnter={toggleDropdown} 
           onMouseLeave={toggleDropdown}
         >
