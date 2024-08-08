@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-// Define styles for the navigation bar
+// Define styles for the navigation bar with a Greek-inspired wedding theme
 const navBarStyle = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #f8f0e3; /* Soft beige background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f4f4f2; /* Soft white background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   position: fixed;
   width: 100%;
   top: 0;
@@ -18,22 +18,23 @@ const navBarStyle = css`
   z-index: 1000;
   box-sizing: border-box;
   flex-wrap: wrap;
-  /* Ensure padding for mobile responsiveness */
+  
   @media (max-width: 768px) {
-    padding: 15px 20px; /* Adjust padding if necessary for mobile */
+    padding: 15px 20px;
   }
 `;
 
 // Define styles for the logo
 const logoStyle = css`
   font-family: 'Dancing Script', cursive;
-  font-size: 24px;
-  color: #a85c49; /* Rich brownish color */
-  margin-right: auto; /* Aligns logo to the left */
+  font-size: 28px;
+  color: #003366; /* Deep Greek blue */
+  margin-right: auto;
+  text-decoration: none;
   
   @media (max-width: 768px) {
     margin-right: 0;
-    margin-bottom: 10px; /* Adds space below the logo on mobile */
+    margin-bottom: 10px;
   }
 `;
 
@@ -41,7 +42,7 @@ const logoStyle = css`
 const NavLinks = styled.ul`
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin: 0;
   padding: 0;
   position: relative;
@@ -53,23 +54,24 @@ const NavLinks = styled.ul`
   }
 `;
 
-// Define styles for each navigation link item
+// Define styles for each navigation link item with wedding-like fonts
 const NavLinkItem = styled.li`
   position: relative;
   
   & a {
     text-decoration: none;
-    color: #5e4433; /* Darker brownish color */
-    font-family: 'Poppins', sans-serif;
+    color: #006699; /* Medium Greek blue */
+    font-family: 'Great Vibes', cursive; /* Wedding-like cursive font */
+    font-size: 18px;
     font-weight: 500;
-    padding: 5px 10px;
+    padding: 8px 12px;
     transition: all 0.3s ease;
     
     &:hover {
-      color: #a85c49;
-      background-color: #fff;
+      color: #f4f4f2;
+      background-color: #003366; /* Deep Greek blue */
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
   }
 `;
@@ -82,20 +84,21 @@ const DropdownMenu = styled.ul`
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #f8f0e3;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f4f4f2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   display: ${(props) => (props.show ? 'block' : 'none')};
   z-index: 999;
   
   & li a {
-    color: #5e4433;
-    padding: 5px 10px;
+    color: #006699;
+    font-family: 'Great Vibes', cursive;
+    padding: 8px 12px;
     display: block;
     white-space: nowrap;
     
     &:hover {
-      color: #a85c49;
-      background-color: #fff;
+      color: #f4f4f2;
+      background-color: #003366;
     }
   }
 `;
@@ -109,8 +112,7 @@ const NavBar = () => {
 
   return (
     <nav css={navBarStyle}>
-      {/* todo: style the logo not have the link line underneath */}
-      <a href='/' css={logoStyle}>Nathan & Megan's Wedding</a> 
+      <a href='/' css={logoStyle}>Nathan & Megan's Wedding</a>
       <NavLinks>
         <NavLinkItem
           onMouseEnter={toggleDropdown} 
