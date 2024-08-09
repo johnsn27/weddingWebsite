@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
 import { css } from '@emotion/react';
 
 // Updated styles for the story page
 export const storyPageStyle = css`
   padding: 80px 20px 80px;
-  max-width: 800px;
   margin: 0 auto;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -31,7 +29,6 @@ export const titleStyle = css`
 // Updated styles for the paragraph text
 export const paragraphStyle = css`
   font-size: 18px;
-  color: #006699; /* Medium Greek blue for links */
   font-family: 'Great Vibes', cursive; /* Wedding-like cursive font for links */
   line-height: 1.8;
   margin-bottom: 30px;
@@ -51,4 +48,33 @@ export const linkStyle = css`
     text-decoration: underline;
     color: #003366; /* Deep Greek blue on hover */
   }
+`;
+
+// New styles for the container that holds the image and text
+export const containerStyle = css`
+  display: flex;
+  align-items: center; /* Center image vertically */
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start on smaller screens */
+  }
+`;
+
+// New styles for the image
+export const imageStyle = css`
+  width: 40%;
+  margin-right: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+`;
+
+// New styles for the text container
+export const textContainerStyle = css`
+  flex: 1;
 `;

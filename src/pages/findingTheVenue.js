@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { storyPageStyle, titleStyle, paragraphStyle } from '../styles/pageStyles';
 
-const Taxis = () => {
+const FindingTheVenue = () => {
     return (
         <div css={storyPageStyle}>
           <h1 css={titleStyle}>Finding the venue</h1>
@@ -23,4 +23,4 @@ const Taxis = () => {
       );
 };
 
-export default Taxis;
+export default FindingTheVenue;
