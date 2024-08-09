@@ -2,6 +2,10 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import { storyPageStyle, titleStyle, paragraphStyle } from '../styles/pageStyles';
+import Accommodation from './accommodation';
+import FindingTheVenue from './findingTheVenue';
+import Parking from './parking';
+import Taxis from './taxis';
 
 const GuestInformation = () => {
   return (
@@ -10,7 +14,10 @@ const GuestInformation = () => {
       <p css={paragraphStyle}>
       Nathan and Megan are getting married on Saturday July 26th 2025 at High House Weddings
       </p>
-      {/* image of us? */}
+      {Accommodation()}
+      {FindingTheVenue()}
+      {Parking()}
+      {Taxis()}
     </div>
   );
 };
